@@ -114,8 +114,7 @@ const config: Config = {
        * - Defines font families using CSS variables for dynamic control.
        */
       fontFamily: {
-        inter: ["var(--font-inter)"],
-        "space-grotesk": ["var(--font-space-grotesk)"],
+        poppins: ["var(--font-poppins)"],
       },
     },
   },
