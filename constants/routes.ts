@@ -24,8 +24,9 @@ const ROUTES = {
   COMUNITY: "/community",
   COLLECTIONS: "/collections",
   JOBS: "/find-jobs",
-  TAGS: "/tags",
-  PROFILE: "/profile",
+  TAGS: (id: string) => `/tags/${id}`,
+  PROFILE: (id: string) => `/profile/${id}`,
+  QUESTION: (id: string) => `/question/${id}`,
   ASK_QUESTION: "/ask-a-question",
 };
 

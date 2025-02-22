@@ -48,20 +48,22 @@ const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
     <>
       {NAV_LINKS.map((link) => {
         // Determine if the current route is active
+        const routeString =
+          typeof link.route === "function" ? link.route(userID) : link.route;
         const isActive =
-          (pathname.includes(link.route) && link.route.length > 1) ||
-          pathname === link.route;
+          (pathname.includes(routeString) && routeString.length > 1) ||
+          pathname === routeString;
 
         // Handle dynamic user profile route
-        if (link.route === "/profile") {
-          if (userID) link.route = `${link.route}/${userID}`;
+        if (routeString === "/profile") {
+          if (userID) link.route = `${routeString}/${userID}`;
           else return null; // Hide profile link if no user ID is available
         }
 
         // Link Component with dynamic styling
         const LinkComponent = (
           <Link
-            href={link.route}
+            href={routeString}
             key={link.label}
             className={cn(
               isActive
@@ -93,11 +95,11 @@ const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
 
         // Handle conditional rendering for mobile navigation
         return isMobileNav ? (
-          <SheetClose asChild key={link.route}>
+          <SheetClose asChild key={routeString}>
             {LinkComponent}
           </SheetClose>
         ) : (
-          <React.Fragment key={link.route}>{LinkComponent}</React.Fragment>
+          <React.Fragment key={routeString}>{LinkComponent}</React.Fragment>
         );
       })}
     </>
