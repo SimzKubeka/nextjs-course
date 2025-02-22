@@ -18,9 +18,15 @@
  */
 
 const ROUTES = {
-  HOME: "/", // Homepage route
-  SIGN_IN: "/sign-in", // User sign-in page route
-  SIGN_UP: "/sign-up", // User registration page route
+  HOME: "/",
+  SIGN_IN: "/sign-in",
+  SIGN_UP: "/sign-up",
+  COMUNITY: "/community",
+  COLLECTIONS: "/collections",
+  JOBS: "/find-jobs",
+  TAGS: "/tags",
+  PROFILE: "/profile",
+  ASK_QUESTION: "/ask-a-question",
 };
 
 export default ROUTES;

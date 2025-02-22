@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ThemeToggler } from './ThemeToggler'
+import MobileNavigation from './MobileNavigation'
 
 const Navbar = () => {
   return (
@@ -15,6 +16,9 @@ const Navbar = () => {
 
         <div className='flex-between gap-5'>
           <ThemeToggler />
+          <div className='md:hidden'>
+            <MobileNavigation />
+          </div>
         </div>
     </nav>
   )

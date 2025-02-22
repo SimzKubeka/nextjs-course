@@ -9,12 +9,7 @@ const Home = async () => {
   return (
     <>
       <div className="">Home Page</div>
-      <form className="px-10 pt-[100px] flex-center" action={async () =>{
-        "use server";
-        await signOut({redirectTo: ROUTES.SIGN_IN});
-      }}>
-        <Button>Log Out</Button>
-      </form>
+      
     </>
   );
 }
