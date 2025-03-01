@@ -26,6 +26,14 @@ export const questions = [
     description:
       "I'm completely new to React and looking for the best resources to start learning. Should I begin with official documentation, online courses, or build a project first? Any structured roadmap would be helpful.",
     tags: ["react", "javascript", "frontend"],
+    author: {
+      _id: 1,
+      name: "John Doe",
+    },
+    upvotes: 10,
+    views: 100,
+    answers: 1,
+    createdAt: new Date(),
   },
   {
     _id: 2,
@@ -34,6 +42,14 @@ export const questions = [
     description:
       "I've heard about React Hooks, but I'm not entirely sure how they work. Can someone explain the benefits of using hooks like useState and useEffect over class components? Are there any best practices to follow?",
     tags: ["react", "hooks", "functional components"],
+    author: {
+      _id: 2,
+      name: "Jane Smith",
+    },
+    upvotes: 10,
+    views: 100,
+    answers: 1,
+    createdAt: new Date(),
   },
   {
     _id: 3,
@@ -41,6 +57,14 @@ export const questions = [
     description:
       "I'm trying to decide whether to use React or Next.js for my next project. Can someone explain the key differences, advantages, and when to choose one over the other? How does server-side rendering (SSR) play a role?",
     tags: ["react", "next.js", "ssr"],
+    author: {
+      _id: 3,
+      name: "Tyrone Doe",
+    },
+    upvotes: 10,
+    views: 100,
+    answers: 1,
+    createdAt: new Date(),
   },
   {
     _id: 4,
@@ -48,6 +72,14 @@ export const questions = [
     description:
       "I'm working on a React project that has started to slow down as the codebase grows. What are some best practices for optimizing performance, including techniques like memoization, lazy loading, and code splitting?",
     tags: ["react", "performance", "optimization"],
+    author: {
+      _id: 4,
+      name: "Hannah Smith",
+    },
+    upvotes: 10,
+    views: 100,
+    answers: 1,
+    createdAt: new Date(),
   },
   {
     _id: 5, 
@@ -55,6 +87,14 @@ export const questions = [
     description:
       "I'm new to Next.js and I want to learn the best way to learn Next.js.",
     tags: ["next.js", "javascript", "web development"],
+    author: {
+      _id: 1,
+      name: "John Doe",
+    },
+    upvotes: 10,
+    views: 100,
+    answers: 1,
+    createdAt: new Date(),
   },
 ];
 
